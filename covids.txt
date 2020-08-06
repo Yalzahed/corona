@@ -1,0 +1,15 @@
+import json, matplotlib.pyplot as plt
+
+f = open("data.json")
+
+data = json.load(f)
+
+print(len(data["CAN"]["data"]))
+dtc = []
+for info in data["CAN"]["data"]:
+    dtc.append(info["total_cases"])
+
+plt.plot(dtc)
+
+plt.ylabel('cases')
+plt.show()
