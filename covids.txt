@@ -4,7 +4,7 @@ f = open("data.json")
 
 data = json.load(f)
 
-print(len(data["CAN"]["data"]))
+print(len(data["CAN" ]["data"]))
 dtc = []
 for info in data["CAN"]["data"]:
     dtc.append(info["total_cases"])
